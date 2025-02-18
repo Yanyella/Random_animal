@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    min-height: 100%;
+    min-height: 100vh;
+    background-color: rgba(13, 14, 56, 0.76);
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 1000px;
+    height: 800px;
+    background-color: rgb(61, 61, 90);
+    -webkit-box-shadow: -6px -5px 53px -3px rgba(13, 14, 56, 1);
+    -moz-box-shadow: -6px -5px 53px -3px rgba(13, 14, 56, 1);
+    box-shadow: -6px -5px 53px -3px rgba(13, 14, 56, 1);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.card__img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+    aspect-ratio: 1/1;
+    background: repeating-radial-gradient(circle at center, #ffffff 0,#ffffff 10px, rgb(127, 128, 143) 10px rgb(127, 128, 143) 20px);
+}
+
+.card__caption {
+    font-family: 'Roboto', monospace;
+    position: absolute;
+    color: aliceblue;
+    font-size: 25px;
+    bottom: 40px;
+    left: 45%;
+}
+
+.button {
+    border: none;
+    max-width: 500px;
+    max-height: 500px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px -2px 5px 11px rgba(205, 206, 223, 0.57) inset;
+    -moz-box-shadow: 1px -2px 5px 11px rgba(205, 206, 223, 0.57) inset;
+    box-shadow: 1px -2px 5px 11px rgba(205, 206, 223, 0.57) inset;
+    text-shadow: 1px 1px 0.5px rgb(183, 184, 224);
+    font-family: 'Roboto', monospace;
+    font-size: 25px;
+}
+
+.animation-image {
+    animation: animationImage 1s ease-in;
+}
+
+@keyframes animationImage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (width >= 350px) and (width <= 700px) {
+    .card {
+        max-width: 900px;
+    }
+
+    .button {
+        padding: 25px 10px;
+        font-size: 30px;
+    }
+}
